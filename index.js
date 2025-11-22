@@ -1,10 +1,14 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
+const cors = require("cors");   
 
 dotenv.config();
 
 const app = express();
+
+app.use(cors());
+
 app.use(express.json());
 
 // ROUTES
